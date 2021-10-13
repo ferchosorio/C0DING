@@ -22,7 +22,7 @@ def mensaje():
     nombre = request.form['nombres']
     telefono = request.form['telefono']
     texto = request.form['comment']
-    return  redirect(f"https://wa.me/573108463577?text=*De:*%20_{nombre}_%0A%0A*Teléfono:*%20_{telefono}_%0A%0A*Mensaje:*%20_{texto}_")
+    return  redirect(f"https://wa.me/573153495460?text=*De:*%20_{nombre}_%0A%0A*Teléfono:*%20_{telefono}_%0A%0A*Mensaje:*%20_{texto}_")
 
 if __name__ == '__main__':
     app.run(debug=True,port=3000)
