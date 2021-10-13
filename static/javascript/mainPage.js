@@ -77,3 +77,25 @@ let ltreOut = (e,b,c,d,f,h) => {
 	tex.innerText = f;
 	tex.style.transition = "all 1s ease-in-out";
 }
+
+function openFormat(formato,close,caja,cod) {
+	const text1 = "Hola, deseo solicitar mas información acerca de SIRVI App."
+	const text2 = "Hola, deseo solicitar mas información acerca de Smart-Bar."
+	const text3 = "Hola, deseo solicitar mas información acerca de La Venta App."
+	var cont = document.querySelector(formato);
+	var cerrar = document.querySelector(close);
+	var cajatext = document.querySelector(caja);
+	if (cod == 1){
+		cajatext.value = text1
+	}
+	else if (cod == 2) {
+		cajatext.value = text2
+	}
+	else if (cod == 3) {
+		cajatext.value = text3
+	}
+	cont.style.display = "flex";
+	cerrar.addEventListener('click',()=>{
+		cont.style.display = "none";
+	});
+}

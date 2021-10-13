@@ -463,7 +463,7 @@ body {
 .formatoA1 {
 	width: 100%;
 	height: 100vh;
-	display: flex;
+	display: none;
 	align-items: center;
 	justify-content: center;
 	background-color: #101010d4;
@@ -471,6 +471,8 @@ body {
 	top: 0%;
 	left: 0%;
 	z-index: 3;
+	animation: fadeIn 1.5s normal;
+	transition: all .8s ease-in-out;
 }
 .trajet {
 	width: 400px;
@@ -482,6 +484,8 @@ body {
 	flex-direction: column;
 	background-color: #0c0c0c;
     box-shadow: 0 0 0 0.2px #00f3df;
+	animation: fadeIn 1.3s normal;
+	transition: all .8s ease-in-out;
 }
 .trajet form {
 	width: 90%;
@@ -517,6 +521,11 @@ body {
 	background-color: transparent;
 	box-shadow: 0 0 0 0.2px #00f3df;
 	outline: none;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	background-position: 8px;
+	animation: fadeIn 1.5s normal;
+	transition: all .8s ease-in-out;
 }
 .trajet form .lbin input[type="text"]::placeholder,
 .trajet form .lbin input[type="tel"]::placeholder {

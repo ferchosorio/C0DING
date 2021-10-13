@@ -74,19 +74,19 @@
 				<div class="contenstruc">
 					<span class="letr"></span>
 					<div class="contStruc">
-						<div class="Prods" onmouseout="ltreOut(this,'.letr','#sirvi','#srv','S . I . R . V . I','#imgns')" onmouseover="letre(this,'S . I . R . V . I','.letr','#sirvi','#srv','#imgns')">
+						<div class="Prods" onmouseout="ltreOut(this,'.letr','#sirvi','#srv','S . I . R . V . I','#imgns')" onmouseover="letre(this,'S . I . R . V . I','.letr','#sirvi','#srv','#imgns')" onclick="openFormat('.formatoA1','.close','#texta','1')">
 							<img src="{{ url_for('static',filename='assets/images/SIRVI.jpg') }}">
 							<div class="txto">
 								<span class="ttlP" id="srv">S . I . R . V . I</span>
 							</div>
 						</div>
-						<div class="Prods" onmouseout="ltreOut(this,'.letr','#smartBar','#smtb','SMART-BAR','#imgns')" onmouseover="letre(this,'SMART-BAR','.letr','#smartBar','#smtb','#imgns')">
+						<div class="Prods" onmouseout="ltreOut(this,'.letr','#smartBar','#smtb','SMART-BAR','#imgns')" onmouseover="letre(this,'SMART-BAR','.letr','#smartBar','#smtb','#imgns')" onclick="openFormat('.formatoA1','.close','#texta','2')">
 							<img src="{{ url_for('static',filename='assets/images/sbar.png') }}">
 							<div class="txto">
 								<span class="ttlP" id="smtb">SMART - BAR</span>
 							</div>
 						</div>
-						<div class="Prods" onmouseout="ltreOut(this,'.letr','#laventaApp','#lva','LA VENTA APP','#imgns')" onmouseover="letre(this,'LA VENTA APP','.letr','#laventaApp','#lva','#imgns')">
+						<div class="Prods" onmouseout="ltreOut(this,'.letr','#laventaApp','#lva','LA VENTA APP','#imgns')" onmouseover="letre(this,'LA VENTA APP','.letr','#laventaApp','#lva','#imgns')" onclick="openFormat('.formatoA1','.close','#texta','3')">
 							<img src="{{ url_for('static',filename='assets/images/lva.jpg') }}">
 							<div class="txto">
 								<span class="ttlP" id="lva">La Venta App</span>
@@ -123,13 +123,15 @@
 					<form action="{{ url_for('mensaje') }}" method="post">
 						<div class="lbin">
 							<label id="lb1">Nombre y apellido</label>
-							<input type="text" name="nombres" placeholder="Nombre y apellido" required>
+							<input type="text" name="nombres" placeholder="Nombre y apellido" required autocomplete="off"
+							style="background-image: url({{ url_for('static',filename='assets/images/svgs/name.svg') }});">
 						</div>
 						<div class="lbin">
 							<label id="lb2">Número de teléfono</label>
-							<input type="tel" name="telefono" placeholder="Número de teléfono" required>
+							<input type="tel" name="telefono" placeholder="Número de teléfono" required autocomplete="off"
+							style="background-image: url({{ url_for('static',filename='assets/images/svgs/phone.svg') }});">
 						</div>
-						<textarea name="coment" cols="50" rows="15" placeholder="Comentario"></textarea>
+						<textarea name="comment" cols="50" rows="15" placeholder="Comentario" id="texta"></textarea>
 						<input type="submit" value="Enviar" class="btSend">
 					</form>
 				</div>
