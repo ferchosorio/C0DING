@@ -1,0 +1,648 @@
+@font-face {
+	src: url(FONTS/Consolas.ttf);
+	font-family: Consolas;
+}
+@font-face {
+	src: url(FONTS/Ubuntu.ttf);
+	font-family: Ubuntu;
+}
+@keyframes tpw {
+	0%{width: 0;}
+	20%{width: 140px;}
+	40%{width: 140px;}
+	60%{width: 140px;}
+	80%{width: 140px;}
+	100%{width: 0;}
+}
+@keyframes cursor {
+	from{border-right-color: #eee;}
+	to{border-right-color: transparent;}
+}
+@keyframes Treveal {
+	to{clip-path: inset(0 0 0 0);}
+}
+@keyframes fadeIn {
+	from {transform: translateX(-100%);}
+	to {transform: translateX(0%);}
+}
+@keyframes imgn {
+	from {transform: translate(0rem, -6rem);}
+	to {transform: translate(0rem, 0rem);}
+}
+@keyframes titulos {
+	from {transform: translate(-100rem, 0rem);}
+	to {transform: translate(0rem, 0rem);}
+}
+@keyframes aparece {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+* {
+	box-sizing: border-box;
+	user-select: none;
+}
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #131313;
+	font-family: Ubuntu;
+	background-image: url(../assets/images/bk2.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+.content {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.S_content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	flex-direction: column;
+}
+.navBar {
+	width: 100%;
+	height: 10%;
+	display: flex;
+	align-items: center;
+	padding-left: 25px;
+	justify-content: flex-end;
+}
+.navBarMobile {
+	position: absolute;
+	top: 20rem;
+	width: 100%;
+	height: 90%;
+	display: none;
+	align-items: center;
+	padding-left: 15px;
+	justify-content: center;
+	animation: fadeIn .4s both;
+    transition: all .4s ease-in-out;
+}
+.navBarMobile .contOps {
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #2f2f2f4d;
+}
+.navBarMobile .contOps .opts {
+	width: 90%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #25252561;
+    padding-left: 20px;
+    margin-bottom: 2rem;
+    color: #fff;
+    animation: fadeIn .7s both;
+    transition: all .6s ease-in-out;
+}
+.Ctitles {
+	position: absolute;
+	left: 10px;
+	top: 25px;
+	font-size: 16px;
+	padding-left: 15px;
+	font-family: Consolas;
+	color: #00f3df;
+	font-weight: 600;
+	background-color: #00000000;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	border-right: 2px solid #eee;
+	white-space: nowrap;
+	overflow: hidden;
+	content: "{ C 0 D I N G }";
+}
+.Ctitles {
+	animation: tpw 10s steps(20,end) 1s infinite,cursor 600ms steps(50,end) infinite;
+}
+.Ctitles:hover {
+	transition: all 0.3s ease-in-out;
+	transform: scale(1.05);
+}
+.contOps {
+	width: 500px;
+	height: 100%;
+	padding-right: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.opts {
+	transition-delay: 0.8s;
+	color: #d6d7d7;
+	width: 100px;
+    position: relative;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.d1, .d2 {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	transform: scaleX(0);
+	transition: all 0.4s;
+	transition-delay: 0.4s;
+	background-color: #00f3df;
+	outline: none;
+}
+.d1 {
+	top: 0;
+	transform-origin: 10px;
+}
+.d2 {
+	bottom: 0;
+	transform-origin: right;
+}
+.opts:hover .d1, .opts:hover .d2 {
+	transform: scaleX(1);
+	transition-delay: 0s;
+	color: #fff;
+}
+.d3, .d4 {
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	background-color: #00f3df;
+	transform: scaleY(0);
+	transition: all 0.4s;
+}
+.d3 {
+	left: 0;
+	transform-origin: bottom;
+}
+.d4 {
+	right: 0;
+	transform-origin: top;
+}
+.opts:hover .d3, .opts:hover .d4 {
+	transform: scaleY(1);
+	transition-delay: 0.4s;
+	color: #fff;
+}
+.structure {
+	width: 100%;
+	height: 85%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	animation: fadeIn .4s both;
+}
+.Foot_cont {
+	width: 100%;
+	height: 5%;
+	background-color: #3e3e3e21;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.Foot_cont span {
+	font-size: 12px;
+	color: #eee;
+	font-family: Consolas;
+}
+.Cont_left {
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.Cont_left img {
+	max-width: 40%;
+	max-height: 40%;
+	backdrop-filter: opacity(0.5);
+	transition: all .5s ease-in-out;
+	animation: imgn 1s both;
+	margin-top: -7rem;
+	pointer-events: none;
+}
+.titles {
+	font-family: Consolas;
+	font-weight: 100;
+    font-size: 1.8em;
+    color: #d6d7d7;
+    margin-top: -0.5rem;
+    transition: all 0.4s ease-in-out;
+    animation: titulos 0.4s;
+    letter-spacing: 10px;
+    margin-left: 16px;
+}
+.titles b {
+	color: #00f3df;
+}
+.subTitles {
+	font-family: Consolas;
+	font-size: 9px;
+	color: #d6d7d7;
+	letter-spacing: 2px;
+	margin-left: 3px;
+	transition: all 0.4s ease-in-out;
+    animation: titulos 0.4s; 
+}
+.subTitles b {
+	color: #00f3df;
+}
+.Cont_right {
+	width: 60%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.tr1,.tr2.tr3,.tr4 {
+	width: 80%;
+	height: 80%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	padding: 20px;
+	flex-direction: column;
+}
+.tr2,.tr3,.tr4 {
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+#mgn {
+	max-width: 70%;
+    max-height: 70%;
+}
+.tlSp {
+	font-family: Ubuntu;
+	font-size: 2em;
+	color: #00f3df;
+	font-weight: 600;
+	padding: 12px;
+	animation: Treveal .8s ease-in-out forwards;
+}
+.desplegar {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 100%;
+	height: 35px;
+	display: none;
+	align-items: center;
+	justify-content: flex-end;
+	border-radius: 50%;
+}
+.desplegar img {
+	max-width: 40px;
+	max-height: 40px;
+	z-index: 3;
+	transition: all .4s ease-in-out;
+}
+.structure2,.structure3,.structure4,.structure5 {
+	width: 100%;
+	height: 85%;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background-color: #00000000;
+	animation: fadeIn .4s both;
+}
+.structure2 {
+	flex-direction: column;
+}
+.contenstruc {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.letr {
+	position: absolute;
+	display: flex;
+	top: 10%;
+	left: 5%;
+	font-size: 4em;
+	font-weight: 600;
+	font-family: Ubuntu;
+	color: #fff;
+	text-shadow: 0 0 20px #00f3df;
+}
+.structure2 h2 {
+	color: #00f3df;
+    font-size: 2em;
+    letter-spacing: 5px;
+    font-family: 'Consolas';
+}
+.structure2 .contenstruc .contStruc {
+	width: 40%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+.structure2 .contenstruc .derStruc {
+	width: 60%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.structure2 .contenstruc .contStruc .Prods {
+	width: 250px;
+	height: 50px;
+	margin: 20px;
+	display: flex;
+	border-radius: 60px;
+	align-items: center;
+	justify-content: space-around;
+    background-color: #38383852;
+    cursor: pointer;
+    animation: fadeIn 1s;
+    transition: all .4s ease-in-out;
+}
+.structure2 .contenstruc .contStruc .Prods:hover {
+	transition: all .4s ease-in-out;
+	transform: scale(1.1);
+}
+.structure2 .contenstruc .contStruc .Prods img {
+	max-width: 70px;
+	max-height: 70px;
+	border-radius: 50%;
+	border: 1px solid #00f3df;
+}
+.ttlP {
+	font-size: 1em;
+	font-weight: 400;
+	color: #00f3df;
+	transition: all .8s ease-in-out;
+}
+.desc {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 100;
+}
+.pests {
+	width: 300px;
+	height: 100px;
+	background-color: #c3c3c30d;
+    backdrop-filter: blur(2px);
+	position: absolute;
+	bottom: 5%;
+	left: 3%;
+	padding: 10px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.writterT,.writterT2 {
+	color: #00f3df;
+	font-weight: 600;
+	font-size: 14px;
+	display: flex;
+	animation: imgn 0.9s;
+	transition: all 0.9s ease-in-out;
+}
+.writter,.writter2 {
+	color: #eee;
+	display: flex;
+	font-weight: 100;
+	font-size: 12px;
+	animation: titulos 1s;
+	transition: all 1s ease-in-out;
+}
+.txSp {
+	color: #eee;
+	font-weight: 100;
+	letter-spacing: 1px;
+	margin-top: 10px;
+	padding: 12px;
+	word-break: break-word;
+	font-family: Consolas;
+}
+.ftSp {
+	font-size: 1.2em;
+	color: #eee;
+	font-weight: 600;
+	width: 100%;
+    padding-left: 12px;
+}
+#imgns {
+	width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+	animation: cae 1s both;
+	transition: all .8s ease-in-out;
+}
+#imgns img {
+	max-width: 40%;
+	max-height: 40%;
+	animation: imgn 1s both;
+	transition: all .8s ease-in-out;
+	pointer-events: none;
+}
+.formatoA1 {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #101010d4;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	z-index: 3;
+}
+.trajet {
+	width: 400px;
+	height: 550px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 15px;
+	flex-direction: column;
+	background-color: #0c0c0c;
+    box-shadow: 0 0 0 0.2px #00f3df;
+}
+.trajet form {
+	width: 90%;
+	height: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.trajet form .lbin {
+	width: 100%;
+	height: 70px;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+}
+.trajet form .lbin label {
+	font-size: 13px;
+	opacity: 1;
+	color: #00f3df;
+	transition: all .8s ease-in-out;
+	margin: 0px 0px 15px -65%;
+}
+.trajet form .lbin input[type="text"],
+.trajet form .lbin input[type="tel"] {
+	width: 100%;
+	height: 30px;
+	border: 0;
+	padding: 5px 5px 5px 40px;
+	font-size: 14px;
+	color: #fff;
+	background-color: transparent;
+	box-shadow: 0 0 0 0.2px #00f3df;
+	outline: none;
+}
+.trajet form .lbin input[type="text"]::placeholder,
+.trajet form .lbin input[type="tel"]::placeholder {
+	font-size: 12px;
+}
+.trajet form textarea {
+	width: 100%;
+    height: 35%;
+    margin: 25px;
+    background-color: transparent;
+    border: 0;
+    box-shadow: 0 0 0 0.2px #00f3df;
+	color: #fff;
+	font-family: 'Ubuntu';
+	padding: 12px;
+	outline: none;
+}
+.btSend {
+	width: 200px;
+    height: 40px;
+    border: 0;
+    font-weight: bold;
+    background-color: #00f3df;
+    color: #101010;
+    cursor: pointer;
+}
+.close {
+	width: 30px;
+	height: 30px;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../assets/images/svgs/close.svg);
+	position: absolute;
+	left: 2rem;
+	top: 2rem;
+	cursor: pointer;
+	border-radius: 50%;
+}
+@media screen and (max-width: 600px) {
+	.content {
+		overflow: scroll;
+	}
+	.S_content {
+		height: auto;
+	}
+	.navBar {
+		display: none;
+	}
+	.desplegar {
+		display: flex;
+	}
+	.structure {
+		flex-direction: column;
+		height: auto;
+	}
+	.structure2,.structure3,.structure4,.structure5 {
+		margin-top: 3rem;
+		flex-direction: column;
+		height: auto;
+	}
+	.Cont_left {
+		width: 100%;
+		height: 100vh;
+	}
+	.Cont_left img {
+		max-width: 45%;
+		max-height: 45%;
+	}
+	.titles {
+		margin-top: -0.5rem;
+	}
+	.Cont_right {
+		width: 100%;
+		height: 100vh;
+		display: none;
+	}
+	.Foot_cont {
+		height: 5%;
+		position: absolute;
+		bottom: 0%;
+		display: none;
+	}
+	.pests {
+		display: none;
+	}
+}
+#sirvi,#smartBar,#laventaApp,#sysgeem {
+	width: 60%;
+	height: 90%;
+	display: none;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 12px;
+	background-color: #19191b61;
+	animation: imgn 1s both;
+	transition: all .5s ease-in-out;
+	font-size: 13px;
+}
+.imgDr {
+	max-width: 80px;
+	max-height: 80px;
+	border-radius: 8px;
+	display: flex;
+	margin: 0 auto;
+}
+.titl {
+	color: #00f3df;
+	font-size: 2em;
+}
+.txtDs {
+	font-size: 13px;
+	color: #fff;
+	word-break: break-word;
+	line-height: 20px;
+}
+.moreInfo {
+	width: 300px;
+	height: 40px;
+	background-color: #00f3df;
+	color: #101010;
+	border: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 12px auto;
+	cursor: pointer;
+}
