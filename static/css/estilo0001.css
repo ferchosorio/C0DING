@@ -582,6 +582,10 @@ body {
 		flex-direction: column;
 		height: auto;
 	}
+	.contenstruc {
+		width: 100%;
+		flex-direction: column;
+	}
 	.structure2,.structure3,.structure4,.structure5 {
 		margin-top: 3rem;
 		flex-direction: column;
@@ -611,6 +615,21 @@ body {
 	}
 	.pests {
 		display: none;
+	}
+	.structure2 .contenstruc .contStruc {
+		width: 100%;
+		flex-direction: row;
+	}
+	.structure2 .contenstruc .contStruc .Prods {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+	}
+	.txto {
+		display: none;
+	}
+	.structure2 .contenstruc .derStruc {
+		width: 95%;
 	}
 }
 #sirvi,#smartBar,#laventaApp,#sysgeem {
