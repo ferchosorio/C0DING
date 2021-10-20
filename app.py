@@ -6,7 +6,6 @@ from werkzeug.utils import redirect
 
 app = Flask(__name__)
 
-#@app.context_processor
 def fecha():
     now = datetime.now()
     year = now.year
@@ -25,4 +24,4 @@ def mensaje():
     return  redirect(f"https://wa.me/573153495460?text=*De:*%20_{nombre}_%0A%0A*Teléfono:*%20_{telefono}_%0A%0A*Mensaje:*%20_{texto}_")
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",debug=True,port=3000)
+    app.run(debug=True,port=3000)
