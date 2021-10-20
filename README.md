@@ -1,3 +1,3 @@
 # C0DING
 
-<img src="static/assets/images/NEWLogo2.png" style="max-width:300px;max-height:300px;"/>
+<img src="static/assets/images/NEWLogo21.png" style="max-width:100px;max-height:100px;"/>
